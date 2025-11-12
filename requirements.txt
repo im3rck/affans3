@@ -1,0 +1,37 @@
+# Core Dependencies
+python-dotenv==1.0.0
+pydantic==2.5.0
+pyyaml==6.0.1
+
+# LLM & AI Framework
+google-generativeai==0.3.2
+langchain==0.1.0
+langchain-google-genai==0.0.6
+langchain-community==0.0.13
+crewai==0.11.0
+crewai-tools==0.0.7
+
+# RAG & Vector Database
+chromadb==0.4.22
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+rank-bm25==0.2.2
+
+# Document Processing
+pypdf==3.17.4
+pymupdf==1.23.8
+pandas==2.1.4
+openpyxl==3.1.2
+
+# Reranking
+flashrank==0.2.0
+
+# Web Interface
+streamlit==1.29.0
+streamlit-chat==0.1.1
+
+# Utilities
+tiktoken==0.5.2
+numpy==1.26.2
+tqdm==4.66.1
+requests==2.31.0

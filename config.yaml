@@ -1,0 +1,35 @@
+# RAG Configuration
+rag:
+  chunk_size: 1000
+  chunk_overlap: 200
+  top_k_results: 5
+  rerank_top_k: 3
+  hybrid_search:
+    vector_weight: 0.7
+    bm25_weight: 0.3
+
+# Agent Configuration
+agent:
+  max_iterations: 10
+  verbose: true
+  allow_delegation: false
+
+# Data Sources
+data_sources:
+  pdfs:
+    - "Amazon_Customer_Service_Operations_KB.pdf"
+    - "Amazon_HR_Employee_Support_KB.pdf"
+    - "Amazon_IT_Device_Support_KB.pdf"
+  csv:
+    - "amazon.csv"
+
+# Knowledge Domains
+knowledge_domains:
+  - name: "Customer Service"
+    description: "Order tracking, refunds, returns, escalations"
+  - name: "HR & Employee Support"
+    description: "Leave policy, payroll, benefits, performance reviews"
+  - name: "IT & Device Support"
+    description: "Laptop setup, VPN, tickets, passwords, software"
+  - name: "Product Information"
+    description: "Amazon product catalog, reviews, ratings"
