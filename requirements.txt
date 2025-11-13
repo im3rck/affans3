@@ -9,6 +9,7 @@ langchain==0.3.0
 langchain-google-genai==1.0.10
 langchain-community==0.3.0
 langchain-core==0.3.0
+litellm==1.48.7
 crewai==0.70.1
 crewai-tools==0.12.1
 

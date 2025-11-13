@@ -2,8 +2,7 @@
 import os
 from typing import List, Optional
 from dotenv import load_dotenv
-from crewai import Agent, Task, Crew, Process
-from langchain_google_genai import ChatGoogleGenerativeAI
+from crewai import Agent, Task, Crew, Process, LLM
 from custom_tools import initialize_tools, get_all_tools
 from rag_system import HybridSearchRAG
 
@@ -15,7 +14,7 @@ class AgenticChatbot:
         self,
         rag_system: HybridSearchRAG,
         api_key: Optional[str] = None,
-        model_name: str = "gemini-1.5-pro",
+        model_name: str = "gemini/gemini-1.5-pro",
         temperature: float = 0.3
     ):
         load_dotenv()
@@ -24,15 +23,17 @@ class AgenticChatbot:
         if not self.api_key:
             raise ValueError("Google API key is required. Set GOOGLE_API_KEY in .env file")
 
+        # Set API key in environment for LiteLLM
+        os.environ["GEMINI_API_KEY"] = self.api_key
+
         self.model_name = model_name
         self.rag_system = rag_system
 
-        # Initialize Gemini LLM
-        self.llm = ChatGoogleGenerativeAI(
+        # Initialize Gemini LLM using CrewAI's LLM wrapper
+        self.llm = LLM(
             model=model_name,
-            google_api_key=self.api_key,
             temperature=temperature,
-            convert_system_message_to_human=True
+            api_key=self.api_key
         )
 
         # Initialize custom tools
