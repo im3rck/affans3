@@ -209,7 +209,14 @@ class HybridSearchRAG:
         results = self.reranker.rerank(rerank_request)
 
         # Sort by score and return top-k
-        reranked_docs = [documents[result['index']] for result in results[:top_k]]
+        # FlashRank returns results with 'corpus_id' key, not 'index'
+        reranked_docs = []
+        for result in results[:top_k]:
+            # Handle different possible key names from FlashRank
+            idx = result.get('corpus_id', result.get('id', result.get('index')))
+            if idx is not None:
+                reranked_docs.append(documents[idx])
+
         return reranked_docs
 
     def retrieve(self, query: str, top_k: int = 5, rerank_top_k: int = 3) -> List[Document]:
