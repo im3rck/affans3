@@ -4,12 +4,7 @@ from typing import List, Optional
 from dotenv import load_dotenv
 from crewai import Agent, Task, Crew, Process
 from langchain_google_genai import ChatGoogleGenerativeAI
-from custom_tools import (
-    KnowledgeBaseSearchTool,
-    ProductQueryTool,
-    WebSearchTool,
-    QueryRewriterTool
-)
+from custom_tools import initialize_tools, get_all_tools
 from rag_system import HybridSearchRAG
 
 
@@ -41,10 +36,8 @@ class AgenticChatbot:
         )
 
         # Initialize custom tools
-        self.knowledge_search_tool = KnowledgeBaseSearchTool(rag_system=rag_system)
-        self.product_query_tool = ProductQueryTool()
-        self.web_search_tool = WebSearchTool()
-        self.query_rewriter_tool = QueryRewriterTool()
+        initialize_tools(rag_system, "amazon.csv")
+        self.tools = get_all_tools()
 
         # Create agents
         self._create_agents()
@@ -70,12 +63,7 @@ class AgenticChatbot:
                 "4. REPEAT: Refine your approach if needed\n"
                 "You always cite your sources and provide accurate, helpful information."
             ),
-            tools=[
-                self.knowledge_search_tool,
-                self.product_query_tool,
-                self.query_rewriter_tool,
-                self.web_search_tool
-            ],
+            tools=self.tools,
             llm=self.llm,
             verbose=True,
             allow_delegation=False,
