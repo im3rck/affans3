@@ -14,7 +14,7 @@ class AgenticChatbot:
         self,
         rag_system: HybridSearchRAG,
         api_key: Optional[str] = None,
-        model_name: str = "gemini/gemini-1.5-pro",
+        model_name: str = "gemini/gemini-1.5-pro-latest",
         temperature: float = 0.3
     ):
         load_dotenv()
@@ -32,8 +32,7 @@ class AgenticChatbot:
         # Initialize Gemini LLM using CrewAI's LLM wrapper
         self.llm = LLM(
             model=model_name,
-            temperature=temperature,
-            api_key=self.api_key
+            temperature=temperature
         )
 
         # Initialize custom tools
