@@ -99,10 +99,11 @@ def print_help():
     print("  /clear   - Clear the screen")
     print("  /exit    - Exit the application")
     print("\nExample queries:")
-    print("  - How do I track my order?")
-    print("  - What is the leave policy for sick days?")
+    print("  - How do I view my pay stub?")
+    print("  - How to reset my network password?")
+    print("  - How do I reserve a conference room?")
     print("  - Find USB cables under 500 rupees")
-    print("  - How to setup VPN?")
+    print("  - What is the 401k enrollment process?")
     print()
 
 

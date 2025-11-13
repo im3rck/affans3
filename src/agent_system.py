@@ -217,9 +217,9 @@ if __name__ == "__main__":
         print("Building index...")
         processor = DocumentProcessor()
         pdf_files = [
-            "Amazon_Customer_Service_Operations_KB.pdf",
-            "Amazon_HR_Employee_Support_KB.pdf",
-            "Amazon_IT_Device_Support_KB.pdf"
+            "HR & Benefits FAQ.pdf",
+            "IT & Tech Support.pdf",
+            "Workplace & Operations FAQ.pdf"
         ]
         csv_files = ["amazon.csv"]
         documents = processor.process_all_documents(pdf_files, csv_files)
@@ -235,9 +235,9 @@ if __name__ == "__main__":
 
     # Test queries
     test_queries = [
-        "How do I track my order?",
+        "How do I view my pay stub?",
         "What are the best USB cables under 500 rupees?",
-        "What is the leave policy for sick days?"
+        "How do I reset my network password?"
     ]
 
     for query in test_queries:

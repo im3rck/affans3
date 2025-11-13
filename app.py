@@ -136,9 +136,9 @@ def main():
         This AI assistant helps you with:
 
         **📚 Knowledge Base:**
-        - Customer Service Operations
-        - HR & Employee Support
-        - IT & Device Support
+        - HR & Benefits (PTO, 401k, leave, payroll)
+        - IT & Tech Support (VPN, passwords, devices)
+        - Workplace & Operations (facilities, safety, access)
 
         **🛍️ Product Information:**
         - Product search & recommendations
@@ -174,12 +174,12 @@ def main():
         # Example queries
         st.header("💡 Example Queries")
         example_queries = [
-            "How do I track my order?",
-            "What is the leave policy?",
-            "How to setup VPN?",
+            "How do I view my pay stub?",
+            "How to reset my network password?",
+            "How do I reserve a conference room?",
             "Find USB cables under ₹500",
-            "Best rated products in electronics",
-            "How to escalate a customer complaint?"
+            "What is the 401k enrollment process?",
+            "How to report a phishing email?"
         ]
 
         for query in example_queries:

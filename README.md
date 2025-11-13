@@ -35,9 +35,9 @@ affans3/
 │   ├── custom_tools.py          # Agent tools
 │   └── agent_system.py          # CrewAI agents with ReAct
 ├── data/
-│   ├── Amazon_Customer_Service_Operations_KB.pdf
-│   ├── Amazon_HR_Employee_Support_KB.pdf
-│   ├── Amazon_IT_Device_Support_KB.pdf
+│   ├── HR & Benefits FAQ.pdf
+│   ├── IT & Tech Support.pdf
+│   ├── Workplace & Operations FAQ.pdf
 │   └── amazon.csv
 ├── app.py                        # Streamlit web interface
 ├── cli.py                        # Command-line interface
@@ -255,29 +255,40 @@ Agent Process:
 
 ## 🎯 Knowledge Domains
 
-### Customer Service Operations
-- Order tracking procedures
-- Refund request handling
-- Returns management
-- Escalation matrix
-- Complaint handling
-- Performance metrics
+### HR & Benefits
+- Pay stub and payment history access
+- PTO and vacation time accrual
+- 401(k) contribution management
+- Leave of Absence (LOA) requests
+- W-2 corrections and tax issues
+- Holiday schedules
+- Personal information updates
+- Employment verification letters
+- Policy violation reporting
 
-### HR & Employee Support
-- Leave policies (sick, vacation, PTO)
-- Payroll information
-- Employee benefits
-- Performance reviews
-- Promotion cycles
-- WFH guidelines
-
-### IT & Device Support
-- Laptop setup procedures
-- VPN configuration
+### IT & Tech Support
+- VPN troubleshooting and configuration
+- Password reset procedures
+- BitLocker key recovery
+- Browser requirements for internal systems
+- Peripheral device requests (monitors, mice, headsets)
+- Shared drive and team site access
+- Mobile device (BYOD) setup
+- Laptop hardware issues
+- Phishing and security threat reporting
 - ServiceNow ticketing
-- MFA setup
-- Password resets
-- Software requests
+
+### Workplace & Operations
+- Conference room reservations
+- Office supply locations
+- Building maintenance requests
+- Lost and found property
+- Desk move and workstation changes
+- Visitor registration procedures
+- Safety hazard reporting
+- Emergency evacuation plans
+- Access badge replacement
+- Catering service requests
 
 ### Product Information
 - 1,465 products in database

@@ -17,19 +17,19 @@ agent:
 # Data Sources
 data_sources:
   pdfs:
-    - "Amazon_Customer_Service_Operations_KB.pdf"
-    - "Amazon_HR_Employee_Support_KB.pdf"
-    - "Amazon_IT_Device_Support_KB.pdf"
+    - "HR & Benefits FAQ.pdf"
+    - "IT & Tech Support.pdf"
+    - "Workplace & Operations FAQ.pdf"
   csv:
     - "amazon.csv"
 
 # Knowledge Domains
 knowledge_domains:
-  - name: "Customer Service"
-    description: "Order tracking, refunds, returns, escalations"
-  - name: "HR & Employee Support"
-    description: "Leave policy, payroll, benefits, performance reviews"
-  - name: "IT & Device Support"
-    description: "Laptop setup, VPN, tickets, passwords, software"
+  - name: "HR & Benefits"
+    description: "Pay stubs, PTO/vacation, 401k, leave of absence, W-2, holidays, personal info updates, employment verification, policy violations"
+  - name: "IT & Tech Support"
+    description: "VPN, password reset, BitLocker, browser requirements, peripheral devices, shared drive access, mobile device setup, laptop issues, phishing, ServiceNow tickets"
+  - name: "Workplace & Operations"
+    description: "Conference room booking, office supplies, building maintenance, lost property, desk moves, visitor registration, safety hazards, evacuation plans, access badges, catering"
   - name: "Product Information"
-    description: "Amazon product catalog, reviews, ratings"
+    description: "Amazon product catalog, reviews, ratings, pricing, discounts"

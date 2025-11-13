@@ -18,9 +18,9 @@ class KnowledgeBaseSearchTool(BaseTool):
     name: str = "Knowledge Base Search"
     description: str = (
         "Search the Amazon knowledge base for information about:\n"
-        "- Customer Service Operations (order tracking, refunds, returns, escalations)\n"
-        "- HR & Employee Support (leave policy, payroll, benefits, performance)\n"
-        "- IT & Device Support (laptop setup, VPN, tickets, passwords)\n"
+        "- HR & Benefits (pay stubs, PTO, 401k, leave of absence, W-2, holidays, employment verification)\n"
+        "- IT & Tech Support (VPN, password reset, BitLocker, peripheral devices, mobile setup, phishing, ServiceNow)\n"
+        "- Workplace & Operations (conference rooms, office supplies, building maintenance, visitor registration, safety, access badges)\n"
         "Use this tool when you need to answer questions about company policies, procedures, or support."
     )
     args_schema: Type[BaseModel] = KnowledgeBaseSearchInput

@@ -257,9 +257,9 @@ if __name__ == "__main__":
     # Process documents
     processor = DocumentProcessor()
     pdf_files = [
-        "Amazon_Customer_Service_Operations_KB.pdf",
-        "Amazon_HR_Employee_Support_KB.pdf",
-        "Amazon_IT_Device_Support_KB.pdf"
+        "HR & Benefits FAQ.pdf",
+        "IT & Tech Support.pdf",
+        "Workplace & Operations FAQ.pdf"
     ]
     csv_files = ["amazon.csv"]
 
@@ -270,7 +270,7 @@ if __name__ == "__main__":
     rag.index_documents(documents)
 
     # Test retrieval
-    query = "How do I track my order?"
+    query = "How do I view my pay stub?"
     results = rag.retrieve(query, top_k=5, rerank_top_k=3)
 
     print(f"\nQuery: {query}")
